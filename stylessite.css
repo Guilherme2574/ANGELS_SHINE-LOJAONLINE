@@ -1,0 +1,349 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+  --cor-primaria: #ffd700; /* Dourado */
+  --cor-secundaria: #b8860b; /* Dourado Escuro */
+  --cor-fundo: #121212; /* Fundo Escuro */
+  --cor-texto: #ffffff; /* Branco */
+  --espacamento-base: 10px;
+}
+
+/* Corpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  text-align: center;
+}
+
+/* Cabeçalho */
+header {
+  
+  background-size: cover;
+  padding: 2%;
+  border-bottom: 1px solid var(--cor-secundaria);
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+/* Navegação */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+#HREFHEADER, nav ul li a{
+  text-decoration: none;
+  color: var(--cor-texto);
+  font-weight: bold;
+  padding: var(--espacamento-base) calc(2 * var(--espacamento-base));
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+/* Barra de busca */
+.search-bar {
+  margin-top: var(--espacamento-base);
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input,
+.search-bar .btn-search {
+  padding: var(--espacamento-base) calc(2 * var(--espacamento-base));
+  border-radius: 25px;
+  border: 1px solid var(--cor-secundaria);
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #1e1e1e; /* Fundo Escuro */
+  color: var(--cor-texto);
+}
+
+.search-bar input {
+  width: 200px;
+  text-align: center;
+}
+
+.search-bar input:focus {
+  border-color: var(--cor-primaria);
+}
+
+.btn-search {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: none;
+  margin-left: var(--espacamento-base);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-search:hover {
+  background-color: var(--cor-primaria);
+  color: #1e1e1e; /* Fundo Escuro */
+}
+
+/* Ações do usuário */
+.user-actions {
+  display: flex;
+  gap: var(--espacamento-base);
+}
+
+.user-actions a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  padding: var(--espacamento-base);
+  transition: color 0.3s ease;
+}
+
+.user-actions a:hover {
+  color: var(--cor-primaria);
+}
+
+/* Principal */
+main {
+  padding: 40px 20px;
+}
+
+/* Produtos */
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.produto {
+  width: 200px;
+  background-color: #1e1e1e; /* Fundo Escuro */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.produto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.produto h3 {
+  font-size: 18px;
+  margin: var(--espacamento-base) 0;
+  min-height: 40px;
+  color: var(--cor-primaria);
+}
+
+.produto p {
+  font-size: 14px;
+  color: var(--cor-secundaria); /* Dourado Escuro */
+  min-height: 60px;
+}
+
+.produto button,
+button.secondary {
+  padding: var(--espacamento-base) calc(2 * var(--espacamento-base));
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.produto button {
+  background-color: var(--cor-primaria);
+  color: #1e1e1e; /* Fundo Escuro */
+}
+
+.produto button:hover,
+button.secondary:hover {
+  background-color: var(--cor-secundaria);
+}
+
+button.secondary {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+}
+
+/* Rodapé */
+#FOOTERPAGINAS {
+  width: 100%;
+  background-color: #1e1e1e;
+  padding: 20px;
+  color: var(--cor-texto);
+  border-top: 1px solid var(--cor-secundaria);
+}
+
+#FOOTERPAGINAS p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#FOOTERPAGINAS p a:hover {
+  text-decoration: underline;
+}
+
+/* Seção de contato */
+#contato {
+  background-color: #1e1e1e; /* Fundo Escuro */
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#contato h2 {
+  font-size: 24px;
+  color: var(--cor-primaria);
+  margin-bottom: 20px;
+}
+
+#contato p,
+#contato label {
+  color: var(--cor-secundaria); /* Dourado Escuro */
+}
+
+#contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contato form input,
+#contato form textarea {
+  padding: 15px;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 25px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #1e1e1e; /* Fundo Escuro */
+  color: var(--cor-texto);
+}
+
+#contato form input:focus,
+#contato form textarea:focus {
+  border-color: var(--cor-primaria);
+}
+
+#contato form button {
+  background-color: var(--cor-primaria);
+  color: #1e1e1e; /* Fundo Escuro */
+  padding: var(--espacamento-base) calc(2 * var(--espacamento-base));
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contato form button:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* Foco para Acessibilidade */
+nav ul li a:focus,
+.produto button:focus,
+button.secondary:focus {
+  outline: 2px dashed var(--cor-primaria);
+  outline-offset: 4px;
+}
+
+#NOMEMARCA {
+  color: var(--cor-primaria);
+  font-size: xx-large;
+  font-family: V;
+}
+#HREFHEADER:hover{
+ 
+  color: var(--cor-primaria);
+  
+}
+
+#instagramicone{
+
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .search-bar input {
+    width: 150px;
+  }
+
+  .user-actions {
+    gap: var(--espacamento-base);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .logo img {
+    max-width: 120px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: var(--espacamento-base);
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .produtos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produto {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar input {
+    width: 70%;
+  }
+
+  .produto {
+    max-width: 250px;
+  }
+}
